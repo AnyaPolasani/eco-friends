@@ -10,6 +10,7 @@ export class TestingPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //sdwedwe
   }
 
 }
