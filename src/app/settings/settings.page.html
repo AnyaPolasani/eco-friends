@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>My Account</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input placeholder="Enter full name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Age</ion-label>
+    <ion-input placeholder="Enter age"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email Adress</ion-label>
+    <ion-input placeholder="Enter email adress"></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ion-select placeholder="Select Country">
+        <ion-select-option>Albania</ion-select-option>
+        <ion-select-option>Algeria</ion-select-option>
+        <ion-select-option>Argentina</ion-select-option>
+        <ion-select-option>Austria</ion-select-option>
+        <ion-select-option>Australia</ion-select-option>
+        <ion-select-option>Azerbaijan</ion-select-option>
+        <ion-select-option>Belgium</ion-select-option>
+        <ion-select-option>Brazil</ion-select-option>
+        <ion-select-option>Bulgaria</ion-select-option>
+        <ion-select-option>Canada</ion-select-option>
+        <ion-select-option>Chile</ion-select-option>
+        <ion-select-option>China</ion-select-option>
+        <ion-select-option>Denmark</ion-select-option>
+        <ion-select-option>Egypt</ion-select-option>
+        <ion-select-option>Finland</ion-select-option>
+        <ion-select-option>France</ion-select-option>
+        <ion-select-option>Georgia</ion-select-option>
+        <ion-select-option>Germany</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+  <ion-label>Rate your Experience!</ion-label>
+  </ion-item>
+  <ion-range [ticks]="true" [snaps]="true" [min]="0" [max]="10">
+  <ion-icon slot="start" name="sad-outline"></ion-icon>
+    <ion-icon slot="end" name="happy-outline"></ion-icon>
+  </ion-range>
+  <ion-item>
+    <ion-label>Feedback or Compaints:</ion-label>
+  <ion-textarea placeholder="Enter Feedback" class="textbox">
+  </ion-textarea>
+  <ion-button>Send</ion-button>
+</ion-item>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Contact Us</ion-card-title>
+    <ion-card-subtitle>Find us at</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+ <img src="/assets/contact.png">
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+</ion-content>
