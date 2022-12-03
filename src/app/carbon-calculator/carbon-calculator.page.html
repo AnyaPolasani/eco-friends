@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="content">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Carbon Calculator</ion-title>
+    <ion-title class="content">Carbon Calculator</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="content">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Carbon Calculator</ion-title>
@@ -15,9 +15,85 @@
   </ion-header>
 
   <div *ngIf="currentDiv === 0">
-    <ion-button size="large" expand="block" class="start" (click)="nextDiv(1)">Start</ion-button>
+    <img src="./assets/carboncalculator.png" class="pic">
+    <ion-button size="large" expand="block" class="start" (click)="nextDiv(0)">Start</ion-button>
   </div>
-  <p>{{currentDiv}}</p>
+  <div *ngIf="currentDiv === 1">
+    <img src="./assets/carbon1.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(14)">Alone</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(12)">2</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(10)">3</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(8)">4</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">5</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(4)">6</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(2)">6+</ion-button>
+  </div>
+  <div *ngIf="currentDiv === 2">
+    <img src="./assets/carbon2.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(10)">Daily</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(8)">Few times a week</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">Rarely</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(4)">Vegetarian</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(2)">Vegan</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 3">
+    <img src="./assets/carbon3.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(3)">9+</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(2)">4-9</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(1)">1-3</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(0)">0</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 4">
+    <img src="./assets/carbon4.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(10)">7+</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(8)">5-7</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">3-5</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(4)">1-3</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(2)">0</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 5">
+    <img src="./assets/carbon5.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(50)">4+ garbage cans</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(40)">3 garbage cans</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(30)">2 garbage cans</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(20)">1 garbage cans</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(5)">1> garbage cans</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 6">
+    <img src="./assets/carbon6.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(12)">30+ miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(10)">20-30 miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">10-20 miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(4)">10> miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(0)">0 miles</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 7">
+    <img src="./assets/carbon7.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(12)">30+ miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(10)">20-30 miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">10-20 miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(4)">10> miles</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(0)">0 miles</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 8">
+    <img src="./assets/carbon8.png" class="picture">
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(2)">Within the state</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(6)">Another state or country</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(20)">Another continent</ion-button>
+    <ion-button size="large" expand="block" class="click" (click)="nextDiv(0)">No travel</ion-button>
+   </div>
+   <div *ngIf="currentDiv === 9">
+    <img src="./assets/carbon9.png" class="picture">
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>  <p>{{score}}</p>
+      </ion-card-title>
+      <ion-card-subtitle>Your carbon footprint score</ion-card-subtitle>
+    </ion-card-header>
+
+  </ion-card>
+
 
 
 </ion-content>
